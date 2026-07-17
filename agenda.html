@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
+
+
+
+    <title>LULI Y FACU</title>
+
+</head>
+<body>
+
+    <style>
+/* Estilos para las tarjetas de días — usan las mismas variables de tu sitio */
+.dia-card {
+    border: 1px solid var(--color-terciario);
+    border-radius: 14px;
+    padding: 18px 20px;
+    text-align: left;
+    width: 90%;
+    max-width: 460px;
+    margin: 0 auto 1rem auto;
+    box-sizing: border-box;
+}
+
+.dia-card .dia-fecha {
+    font-family: var(--font-principal);
+    color: var(--color-principal);
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: block;
+    margin: 0 0 4px 0;
+}
+
+.dia-card .dia-detalle {
+    font-family: var(--font-principal);
+    color: var(--gris-placeholder);
+    font-size: 1rem;
+    display: block;
+    margin: 0 0 14px 0;
+}
+
+.dia-card select {
+    font-family: var(--font-principal);
+    color: var(--gris-placeholder);
+    font-size: 1rem;
+    background-color: var(--color-0);
+    border: 1px solid var(--color-terciario);
+    border-radius: 8px;
+    padding: 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+</style>
+
+<div class="forms">
+
+    <form name="reservasform" method="POST" action="PEGA_ACA_TU_URL_DE_APPS_SCRIPT" class="formulario">
+
+        <label data-aos="fade-up" class="formtitle">Confirmá tu lugar</label>
+        <label data-aos="fade-up" class="formtitle-sub">Elegí los días a los que venís y contanos cuántos son</label>
+
+        <input type="text" name="NOMBRE" placeholder="Nombre" required />
+        <input type="text" name="APELLIDO" placeholder="Apellido" required />
+        <input type="number" name="LUGARES" placeholder="Cantidad de lugares reservados" min="1" required />
+
+        <div class="dia-card" data-aos="fade-up">
+            <span class="dia-fecha">Viernes 20/11</span>
+            <span class="dia-detalle">After / cena — lugar a confirmar</span>
+            <select name="VIERNES" required>
+                <option value="" disabled selected>Elegí una opción</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
+                <option value="aun_no_lo_decido">Aún no lo decido</option>
+            </select>
+        </div>
+
+        <div class="dia-card" data-aos="fade-up">
+            <span class="dia-fecha">Sábado 21/11</span>
+            <span class="dia-detalle">Día de playa: torneo de tejo/fútbol/paleta, sunset y fogón — horario y locación a confirmar</span>
+            <select name="SABADO" required>
+                <option value="" disabled selected>Elegí una opción</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
+                <option value="aun_no_lo_decido">Aún no lo decido</option>
+            </select>
+        </div>
+
+        <div class="dia-card" data-aos="fade-up">
+            <span class="dia-fecha">Lunes 23/11</span>
+            <span class="dia-detalle">Brunch y mates en el parador — horario a confirmar</span>
+            <select name="LUNES" required>
+                <option value="" disabled selected>Elegí una opción</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
+                <option value="aun_no_lo_decido">Aún no lo decido</option>
+            </select>
+        </div>
+
+        <button type="submit" class="boton">ENVIAR</button>
+    </form>
+
+    <p data-aos="fade-up">RECORDÁ COMPLETAR UN FORMULARIO POR PERSONA.</p>
+</div>
+    <footer>
+        <div class="contenido">
+            <div>
+            <img src="./img/logosiquiero.png" alt="icono si quiero">
+                <p>Hecho con &hearts; <br>
+                &#169 <b>Si,quiero!</b> - invitaciones inteligentes.
+                <br> Todos los derechos reservados.</p>
+            </div>
+
+            <div class="contenido-list">
+                <ul>
+                    <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+                    <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("myAudio");
+
+    // Escucha el primer scroll
+    const playOnScroll = () => {
+      audio.play().catch(e => {
+        console.warn("El navegador bloqueó la reproducción automática", e);
+      });
+      document.removeEventListener("scroll", playOnScroll); // Se ejecuta solo una vez
+    };
+
+    document.addEventListener("scroll", playOnScroll);
+  });
+</script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+
+    <script>
+
+    function copyToClipboard(text) {
+       const tempInput = document.createElement("input");
+       document.body.appendChild(tempInput);
+       tempInput.value = text;
+       tempInput.select();
+       document.execCommand("copy");
+       document.body.removeChild(tempInput);
+       alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+     }
+   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach((header) => {
+      header.addEventListener("click", function () {
+        const item = this.parentElement;
+        item.classList.toggle("active");
+
+        // Cierra otros ítems si querés que solo se abra uno a la vez:
+        headers.forEach((otherHeader) => {
+          const otherItem = otherHeader.parentElement;
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
