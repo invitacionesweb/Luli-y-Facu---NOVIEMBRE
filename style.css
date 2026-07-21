@@ -710,6 +710,17 @@ label .grupo-opciones {
      padding: 0;
     margin: 0;
 }
+.img-precios {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-precios img {
+    width: 80vw;
+    max-width: 460px;
+}
+
 
 /* Subtítulo dentro del form, más chico que .formtitle */
 .formulario .formtitle-sub {

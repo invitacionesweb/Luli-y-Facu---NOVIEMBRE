@@ -170,10 +170,9 @@
 
   
         <div data-aos="fade-up"  class="accordion-item">
-            <button class="accordion-header">NUESTROS RECOMENDADOS</button>
+            <button class="accordion-header">DONDE HOSPEDARSE</button>
             <div class="accordion-content">
-                <p>¡Sabemos que nuestra boda será toda una aventura!
-                    Por eso armamos una lista de recomndaciones para vos.
+                <p>Recomendamos hospedarse en Carilo, armamos una lista de opciones, cualquier duda nos preguntan.🤍
                 </p> <br>
         <a data-aos="fade-up" target="_blank" class="boton2" href="./recomendaciones.html">VER MÁS</a><br> <br>
 
@@ -184,19 +183,14 @@
             <button class="accordion-header">AGENDA DE LA BODA</button>
             <div class="accordion-content">
                 <p>¡Sabemos que nuestra boda será toda una aventura!
-                    Por eso armamos una lista de recomndaciones para vos.
+                    Dejamos agenda del finde para que confirmen qué días nos van a estar acompañando.
                 </p> <br>
         <a data-aos="fade-up" target="_blank" class="boton2" href="https://forms.gle/Zh9nAfAF2535BtVo7">VER MÁS</a><br> <br>
 
             </div>
         </div>
         
-        <div data-aos="fade-up"  class="accordion-item">
-            <button class="accordion-header">¿QUÉ PASA SI TENGO MÁS DUDAS?</button>
-            <div class="accordion-content">
-                <p>Creemos que todas tus dudas estan resueltas pero si tenes más consultas no dudes en escribirnos a nosotros hasta 48 hs antes del evento o a nuestros familares más cercanos dentro de las 48 hs previas.</p> <br>
-            </div>
-        </div>
+  
         
        
     <br>
@@ -232,7 +226,7 @@
      <div class="forms">
         
 
-        <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwdNAd-aORSPXtAEm3F6_vtRpIvRyzbqCSJZikBAApP2CJPiYqWCEs3hcpufb09uGrF2Q/exec" class="formulario">
+      <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwdNAd-aORSPXtAEm3F6_vtRpIvRyzbqCSJZikBAApP2CJPiYqWCEs3hcpufb09uGrF2Q/exec" class="formulario">
 
             <label data-aos="fade-up" class="formtitle">Sólo faltas vos, Venis?</label>
 
@@ -249,6 +243,18 @@
 
             <input type="text" name="NOMBRE" placeholder="Nombre" required />
             <input type="text" name="APELLIDO" placeholder="Apellido" required />
+
+            <select name="ACOMPANANTES" required>
+                <option value="" disabled selected>¿Cuántas personas te acompañan?</option>
+                <option value="Solo yo">Solo yo</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <input type="text" name="NOMBRES_ACOMPANANTES" placeholder="Nombre de tus acompañantes" />
+
             <input type="text" name="DIETA" placeholder="Vegano / vegetariano / celíaco / nada"  />
         <input type="text" name="CANCNION" placeholder="Recomendale una canción al dj 🎶"  />
 
@@ -256,7 +262,8 @@
             <button type="submit" class="boton">ENVIAR</button>
         </form>
 
-        <p data-aos="fade-up">RECORDÁ COMPLETAR UN FORMULARIO POR PERSONA.</p>
+
+    </div>
     </div>
 
 
