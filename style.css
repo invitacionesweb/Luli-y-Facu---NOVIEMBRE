@@ -994,6 +994,15 @@ footer p {
         max-width: 320px;
     }
 
+    .datos-ubicacion2 p {
+        font-size: 1.2em;
+        padding: auto;
+        margin: auto;
+        text-align: center;
+        font-family: sans-serif;
+        max-width: 320px;
+    }
+    }
 
     .timeline .iconos {
         flex-direction: column;

@@ -132,7 +132,7 @@
         <div data-aos="fade-up"  class="accordion-item">
             <button class="accordion-header">¿CÓMO ME VISTO?</button>
             <div class="accordion-content">
-                <p>Beach chic - “Elegante playero” Sin zapatos de gala pero tampoco ojotas , lo importante es estar cómodos! 🏖️
+                <p>Beach chic - “Elegante playero” Sin zapatos de gala pero tampoco ojotas , lo importante es estar cómodos! Tener en cuenta que el parador esta sobre el mar, llevar abrigo, por las dudas. 🏖️
                 </p> 
   
   <br>
@@ -226,7 +226,7 @@
      <div class="forms">
         
 
-      <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwdNAd-aORSPXtAEm3F6_vtRpIvRyzbqCSJZikBAApP2CJPiYqWCEs3hcpufb09uGrF2Q/exec" class="formulario">
+<form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwdNAd-aORSPXtAEm3F6_vtRpIvRyzbqCSJZikBAApP2CJPiYqWCEs3hcpufb09uGrF2Q/exec" class="formulario">
 
             <label data-aos="fade-up" class="formtitle">Sólo faltas vos, Venis?</label>
 
@@ -244,7 +244,7 @@
             <input type="text" name="NOMBRE" placeholder="Nombre" required />
             <input type="text" name="APELLIDO" placeholder="Apellido" required />
 
-            <select name="ACOMPANANTES" required>
+            <select name="ACOMPANANTES" id="acompanantes" required>
                 <option value="" disabled selected>¿Cuántas personas te acompañan?</option>
                 <option value="Solo yo">Solo yo</option>
                 <option value="1">1</option>
@@ -253,7 +253,7 @@
                 <option value="4">4</option>
             </select>
 
-            <input type="text" name="NOMBRES_ACOMPANANTES" placeholder="Nombre de tus acompañantes" />
+            <template id="acompanantes-anchor"></template>
 
             <input type="text" name="DIETA" placeholder="Vegano / vegetariano / celíaco / nada"  />
         <input type="text" name="CANCNION" placeholder="Recomendale una canción al dj 🎶"  />
@@ -261,6 +261,35 @@
              <input type="text" name="MENSAJE" placeholder="Dejale un mensaje a los novios 🤍"  />
             <button type="submit" class="boton">ENVIAR</button>
         </form>
+
+        <script>
+        (function () {
+            var select = document.getElementById('acompanantes');
+            var anchor = document.getElementById('acompanantes-anchor');
+
+            select.addEventListener('change', function () {
+                // saca los campos generados en la vuelta anterior
+                document.querySelectorAll('.acompanante-input').forEach(function (el) {
+                    el.remove();
+                });
+
+                var valor = this.value;
+                var cantidad = (valor === 'Solo yo' || valor === '') ? 0 : parseInt(valor, 10);
+
+                for (var i = cantidad; i >= 1; i--) {
+                    var input = document.createElement('input');
+                    input.type = 'text';
+                    input.name = 'ACOMPANANTE_' + i;
+                    input.placeholder = 'Nombre y apellido de acompañante ' + i;
+                    input.required = true;
+                    input.className = 'acompanante-input';
+                    // se inserta como hermano directo dentro del form, para heredar
+                    // el mismo espaciado que el resto de los campos
+                    anchor.insertAdjacentElement('afterend', input);
+                }
+            });
+        })();
+        </script>
 
 
     </div>
